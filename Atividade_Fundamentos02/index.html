@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Agenda de Contatos</h1>
+
+        <div class="tabs">
+            <button onclick="mostrarSecao('cadastro')">Cadastrar Contato</button>
+            <button onclick="mostrarSecao('lista')">Listar Contatos</button>
+        </div>
+
+        <div id="cadastro" class="secao ativa">
+            <div class="form">
+                <input type="text" id="nome" placeholder="Nome" autocomplete="off" />
+                <input type="text" id="telefone" placeholder="Telefone" autocomplete="off" />
+                <input type="email" id="email" placeholder="Email" autocomplete="off" />
+                <button onclick="adicionarContato()">Adicionar Contato</button>
+            </div>
+
+            <div class="search">
+                <input type="text" id="busca" placeholder="Buscar contato por nome" autocomplete="off" />
+                <button onclick="procurarContato()">Buscar</button>
+            </div>
+
+            <div id="resultadoBusca" class="resultado"></div>
+        </div>
+
+        <div id="lista" class="secao">
+            <h2>Lista de Contatos</h2>
+            <ul id="listaContatos"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
